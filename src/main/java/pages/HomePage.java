@@ -23,13 +23,13 @@ public class HomePage extends BasePage {
 		wait.until(ExpectedConditions.visibilityOf(loginButton));
 	}
 	
-	public LoginUsernamePage navigateToLoginPage() {
+	public LoginPage navigateToLoginPage() {
 		Boolean isLoginButtonDisplayed = loginButton.isDisplayed(); 
 		if (isLoginButtonDisplayed) {
 			loginButton.click();			
 		} else {
 			yourAccount.click();
 		}
-		return new LoginUsernamePage(driver);
+		return new LoginPage(driver);
 	} 
 }
